@@ -35,7 +35,7 @@ jobs:
         for q in (os.getenv("MY_VAL")):
           print(q)
       shell: python
-    - name: Set env as single line
+    - name: test env as single line
       env:
         MY_VAL: ${{ secrets.NAME }}
       run: |
