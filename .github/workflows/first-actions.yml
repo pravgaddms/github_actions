@@ -35,3 +35,10 @@ jobs:
         for q in (os.getenv("MY_VAL")):
           print(q)
       shell: python
+    - name: Set env as secret
+      env:
+        MY_VAL: ${{ secrets.NAME }}
+      run: |
+        import os
+        print(os.getenv("MY_VAL"))
+      shell: python
