@@ -3,6 +3,10 @@ name: My First GitHub Actions
 
 on: [push]
 
+env:
+  BUILDS_ON: "SEFL-HOSTED"
+  
+
 jobs:
   build:
     runs-on: self-hosted
@@ -36,11 +40,8 @@ jobs:
         for q in (os.getenv("MY_VAL")):
           print(q)
       shell: python
-    - name: test env as single line
+   
+    - name: Dump matrix context
       env:
-        MY_VAL: ${{ secrets.NAME }}
-      run: |
-        import os
-        VAL=os.getenv("MY_VAL")
-        print(VAL)
-      shell: python
+        BUILDS_ON_CONTEXT: ${{ BUILDS_ON }}
+        run: echo "$BUILDS_ON_CONTEXT"
