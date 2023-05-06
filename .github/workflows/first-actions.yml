@@ -1,3 +1,4 @@
+#/usr/bin/nohup ./run.sh & to run the service in backgroud
 name: My First GitHub Actions
 
 on: [push]
