@@ -35,10 +35,11 @@ jobs:
         for q in (os.getenv("MY_VAL")):
           print(q)
       shell: python
-    - name: Set env as secret
+    - name: Set env as single line
       env:
         MY_VAL: ${{ secrets.NAME }}
       run: |
         import os
-        print(os.getenv("MY_VAL"))
+        VAL: os.getenv("MY_VAL"))
+        print(VAL)
       shell: python
