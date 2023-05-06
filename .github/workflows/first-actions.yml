@@ -26,5 +26,12 @@ jobs:
       run: |
         cd src
         python -m pytest addition.py
-        name: ${{ secrets.NAME }}
-        echo $name
+
+    - name: Set env as secret
+      env:
+        MY_VAL: ${{ secrets.NAME }}
+      run: |
+        import os
+        for q in (os.getenv("MY_VAL")):
+          print(q)
+      shell: python
