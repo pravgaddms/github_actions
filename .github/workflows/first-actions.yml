@@ -40,6 +40,6 @@ jobs:
         MY_VAL: ${{ secrets.NAME }}
       run: |
         import os
-        VAL: os.getenv("MY_VAL")
+        VAL=os.getenv("MY_VAL")
         print(VAL)
       shell: python
