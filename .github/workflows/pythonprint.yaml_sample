@@ -20,12 +20,12 @@ jobs:
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
       
-      - name: Docker Login
-        uses: docker/login-action@v2.1.0
-        with:
-         registry: # optional
-         username: # optional
-         password: # optional
-         logout: # optional, default is true
+      # - name: Docker Login
+      #   uses: docker/login-action@v2.1.0
+      #   with:
+      #    registry: # optional
+      #    username: # optional
+      #    password: # optional
+      #    logout: # optional, default is true
       
       
