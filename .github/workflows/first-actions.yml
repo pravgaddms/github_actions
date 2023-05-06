@@ -26,4 +26,5 @@ jobs:
       run: |
         cd src
         python -m pytest addition.py
-        echo ${{ secrets.NAME }}
+        name: ${{ secrets.NAME }}
+        echo $name
